@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Eatforus</title>
+    <title>Eat For Us</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,13 @@
   </head>
 
   <body>
+  <header>
+  	<nav>
+  		<ul>
+  			<%= link_to "New Article" %>
+  		</ul>
+  	</nav>
+  </header>
     <%= yield %>
   </body>
 </html>
