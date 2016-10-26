@@ -1,9 +1,11 @@
 /*****COLOR VARIABLES*******/
-$header-color: rgba(7, 29, 9, 0.96);
+$header-color: rgba(7, 29, 9, 0.76);
+$light-foreground: rgba(226, 233, 233, 1);
+$hover: rgba(236, 149, 34, 0.96);
 
 header {
 	background-color: $header-color;
-	height: 250px;
+	height: 225px;
 	margin: 0;
 
 	nav {
@@ -13,11 +15,16 @@ header {
 			padding: 0;
 
 			li 	{
-
+				float: left;
+				padding: 5px;
 
 				a {
-					color: white;
+					color: $light-foreground;
 					text-decoration: none;
+				}
+
+				a:hover {
+					color: $hover;
 				}
 			}
 		}
