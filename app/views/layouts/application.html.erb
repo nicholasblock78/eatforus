@@ -10,15 +10,18 @@
 
   <body>
   <header>
-  	<%= image_tag('EFS-logo.png', class: 'header-img') %>
-  	<nav>
-  		<ul>
-  			<li><%= link_to "New Article", '#' %></li>
-  			<li><%= link_to "Recipes", '#' %></li>
-  			<li><%= link_to "Market Locator", '#' %></li>
-  		</ul>
-  	</nav>
-  	<p></p>
+	  <div class="header-container">
+	  	<figure>
+		  	<%= image_tag('EFS-logo.png', class: 'header-img') %>
+	  	</figure>
+	  	<nav>
+	  		<ul>
+	  			<li><%= link_to "New Article", '#' %></li>
+	  			<li><%= link_to "Recipes", '#' %></li>
+	  			<li><%= link_to "Market Locator", '#' %></li>
+	  		</ul>
+	  	</nav>
+	  </div>
   </header>
   <div id="main-container">
     <%= yield %>

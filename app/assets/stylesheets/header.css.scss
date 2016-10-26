@@ -5,10 +5,24 @@ $hover: rgba(236, 149, 34, 0.96);
 
 header {
 	background-color: $header-color;
-	height: 225px;
+	height: 250px;
 	margin: 0;
 
+.header-container {
+	display: flex;
+	flex-direction: column;
+	
+	width: 100%;
+
+	figure {
+		display: flex;
+		justify-content: center;
+		/*width: 100%;*/
+	}
+
 	nav {
+		display: flex;
+		justify-content: center;
 
 		ul {
 			list-style-type: none;
@@ -31,6 +45,8 @@ header {
 	}
 
 	.header-img {
+
 		width: 350px;
 	}
+}
 }
