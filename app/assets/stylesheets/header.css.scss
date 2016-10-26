@@ -5,7 +5,7 @@ $hover: rgba(236, 149, 34, 0.96);
 
 header {
 	background-color: $header-color;
-	height: 250px;
+	height: 200px;
 	margin: 0;
 
 .header-container {
@@ -45,7 +45,7 @@ header {
 	}
 
 	.header-img {
-
+		margin-top: 10px;
 		width: 350px;
 	}
 }
