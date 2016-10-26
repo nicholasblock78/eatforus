@@ -1,6 +1,9 @@
+/*****COLOR VARIABLES*******/
+$header-color: rgba(7, 29, 9, 0.96);
+
 header {
-	background-color: rgba(220,220,220, 0.7);
-	height: 300px;
+	background-color: $header-color;
+	height: 250px;
 	margin: 0;
 
 	nav {
@@ -12,7 +15,15 @@ header {
 			li 	{
 
 
+				a {
+					color: white;
+					text-decoration: none;
+				}
 			}
 		}
+	}
+
+	.header-img {
+		width: 350px;
 	}
 }
