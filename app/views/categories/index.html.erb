@@ -1,4 +1,9 @@
 <h2>Category Homepage</h2>
-<% @categories.each do |cat| %>
-	<%= cat.title %>
-<% end %>
+
+<%= link_to('Post a new article', articles_new_path) %>
+<br />
+<ul>
+	<% @categories.each do |cat| %>
+		<li><%= cat.title %></li>
+	<% end %>
+</ul>
