@@ -1,6 +1,6 @@
 <h2>Articles</h2>
 <ul>
 	<% @articles.each do |a| %>
-		<li><%= a.title %></li>
+		<li><%= link_to "#{a.title}", category_article_path(a.category_id, id: a.id) %></li>
 	<% end %>
 </ul>
