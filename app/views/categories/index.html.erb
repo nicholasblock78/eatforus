@@ -2,8 +2,15 @@
 
 <%= link_to('Post a new article', articles_new_path) %>
 <br />
-<ul>
+<ul id="categories">
 	<% @categories.each do |cat| %>
 		<li><%= cat.title %></li>
+			<ul id="articles">
+				<% cat.articles.each do |a| %>
+					<li><%= a.title %><br />
+					<%= a.author %></li>
+				<% end %>
+			</ul>
+			<br />
 	<% end %>
 </ul>

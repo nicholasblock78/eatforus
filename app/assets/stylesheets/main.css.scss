@@ -61,6 +61,7 @@ body {
 						box-shadow: 3px 3px 3px black;
 						color: beige;
 						display: block;
+						letter-spacing: 1.5px;
 						margin: 15px 0;
 						height: 35px;
 						padding-top: 13px;
@@ -77,6 +78,21 @@ body {
 	main {
 		float: right;
 		width: 75%;
+
+		ul#categories {
+			list-style-type: none;
+
+			 > li {
+				font-style: bold;
+				font-size: 2em;
+				text-decoration: underline;
+			}
+
+			ul#articles {
+				padding-left: 25px;
+
+			}
+		}
 	}
 
 	footer {
