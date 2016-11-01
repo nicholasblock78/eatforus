@@ -14,6 +14,9 @@
 	  	<figure>
 		  	<%= image_tag('EFS-logo.png', class: 'header-img') %>
 	  	</figure>
+	  </div>
+  </header>
+  	<aside>
 	  	<nav>
 	  		<ul>
 	  			<li><%= link_to "Home", root_path %></li>
@@ -21,11 +24,10 @@
 	  			<li><%= link_to "Market Locator", locator_path %></li>
 	  		</ul>
 	  	</nav>
-	  </div>
-  </header>
-  <div id="main-container">
-    <%= yield %>
-	</div>
+  	</aside>
+	<main>
+	    <%= yield %>
+	</main>
 
 	<footer>
 		<p>Built using <em>Ruby on Rails 5</em></p>
