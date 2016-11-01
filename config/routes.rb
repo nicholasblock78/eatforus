@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
 get 'articles/new' => 'articles#new'  
 post 'articles' => 'articles#create'
+get 'locator' => 'pages#locator'
 
   resources 'categories' do 
   	resources 'articles'
