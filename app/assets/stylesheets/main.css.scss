@@ -12,15 +12,42 @@
 	width: 80%;
 }
 
+
+
 body {
 	background-color: goldenrod;
 
+	header {
+		border-bottom: solid 2px yellow;
+		margin-bottom: 2%;
+		.header-container {
+
+			figure {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			img {
+				margin: 0 auto;
+			}
+		}
+		}
+
+		figcaption {
+			clear: both;
+			color: white;
+			height: 15px;
+			text-align: center;
+		}
+	}
+
 	aside {
+		// background-color: white;
 		display: inline-block;
 		width: 25%;
 
 		nav {
-			margin-left: 12%;
+			margin-left: 15%;
 			margin-top: 12%;
 
 			ul {
@@ -30,11 +57,13 @@ body {
 
 					a {
 						background-color: green;
+						border-radius: 15px;
+						box-shadow: 3px 3px 3px black;
 						color: beige;
 						display: block;
 						margin: 15px 0;
 						height: 35px;
-						padding-top: 12px;
+						padding-top: 13px;
 						text-align: center;
 						text-decoration: none;
 						text-shadow: 2px 2px black;
@@ -51,7 +80,7 @@ body {
 	}
 
 	footer {
-		border-top: 2px solid black;
+		border-top: 2px solid yellow;
 		clear: both;
 		margin-top: 10%;
 		display: flex;
