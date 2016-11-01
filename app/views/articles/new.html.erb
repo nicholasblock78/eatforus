@@ -5,12 +5,15 @@
   <%= f.label :author %>:
   <%= f.text_field :author %><br />
 
-  <%= f.radio_button(:category_id, '1') %>
-  <%= f.label(:cat, "Farm") %>
-  <%= f.radio_button(:category_id, '2') %>
-  <%= f.label(:cat, "Table") %>
-  <%= f.radio_button(:category_id, '3') %>
-  <%= f.label(:cat, "Miscellaneous") %><br />
+  <fieldset>
+  <legend>Select a Category: </legend>
+    <%= f.radio_button(:category_id, 1) %>
+    <%= f.label(:cat, "Farm") %>
+    <%= f.radio_button(:category_id, 2) %>
+    <%= f.label(:cat, "Table") %>
+    <%= f.radio_button(:category_id, 3) %>
+    <%= f.label(:cat, "Miscellaneous") %><br />
+  </fieldset>
 
   <%= f.label :body %>:
   <%= f.text_area :body %><br />
