@@ -1,3 +1,6 @@
-<h2><%= @article.title %></h2>
-<p><%= @article.author %></p>
-<p><%= @article.body %></p>
+<section class="article">
+	<h2><%= @article.title %></h2>
+	<p>Written by: <em><%= @article.author %></em></p>
+	<br />
+	<p class="body"><%= @article.body %></p>
+</section>
