@@ -1,24 +1,3 @@
-# README
+# Eat for Us
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I'm very excited to be able to start working on this sustainable food blog. I've lost over 120 pounds and I can't wait to pour what I've learned into this site. Hopefully, this site will prove invaluable to others trying to achieve the same feat as me or simply make a difference in our world. 
