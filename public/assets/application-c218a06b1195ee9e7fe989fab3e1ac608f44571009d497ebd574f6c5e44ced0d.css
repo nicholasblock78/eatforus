@@ -1,0 +1,173 @@
+/*****COLOR VARIABLES*******/
+/* line 7, /Users/nick/Desktop/eatforus/app/assets/stylesheets/header.css.scss */
+header {
+  background-color: rgba(7, 29, 9, 0.76);
+  height: 200px;
+  margin: 0;
+}
+/* line 12, /Users/nick/Desktop/eatforus/app/assets/stylesheets/header.css.scss */
+header .header-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+/* line 18, /Users/nick/Desktop/eatforus/app/assets/stylesheets/header.css.scss */
+header .header-container figure {
+  display: flex;
+  justify-content: center;
+  /*width: 100%;*/
+}
+/* line 24, /Users/nick/Desktop/eatforus/app/assets/stylesheets/header.css.scss */
+header .header-container nav {
+  display: flex;
+  justify-content: center;
+}
+/* line 28, /Users/nick/Desktop/eatforus/app/assets/stylesheets/header.css.scss */
+header .header-container nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+/* line 32, /Users/nick/Desktop/eatforus/app/assets/stylesheets/header.css.scss */
+header .header-container nav ul li {
+  float: left;
+  padding: 5px;
+}
+/* line 36, /Users/nick/Desktop/eatforus/app/assets/stylesheets/header.css.scss */
+header .header-container nav ul li a {
+  color: #e2e9e9;
+  text-decoration: none;
+}
+/* line 41, /Users/nick/Desktop/eatforus/app/assets/stylesheets/header.css.scss */
+header .header-container nav ul li a:hover {
+  color: rgba(236, 149, 34, 0.96);
+}
+/* line 48, /Users/nick/Desktop/eatforus/app/assets/stylesheets/header.css.scss */
+header .header-container .header-img {
+  margin-top: 10px;
+  width: 350px;
+}
+/* line 1, /Users/nick/Desktop/eatforus/app/assets/stylesheets/main.css.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 6, /Users/nick/Desktop/eatforus/app/assets/stylesheets/main.css.scss */
+#main-container {
+  background-color: white;
+  box-shadow: 0 0 10px gray;
+  height: 200px;
+  margin: 25px auto;
+  padding: 10px;
+  width: 80%;
+}
+
+/* line 17, /Users/nick/Desktop/eatforus/app/assets/stylesheets/main.css.scss */
+body {
+  background-color: goldenrod;
+}
+/* line 20, /Users/nick/Desktop/eatforus/app/assets/stylesheets/main.css.scss */
+body header {
+  border-bottom: solid 2px yellow;
+  margin-bottom: 2%;
+}
+/* line 25, /Users/nick/Desktop/eatforus/app/assets/stylesheets/main.css.scss */
+body header .header-container figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* line 30, /Users/nick/Desktop/eatforus/app/assets/stylesheets/main.css.scss */
+body header .header-container figure img {
+  margin: 0 auto;
+}
+/* line 36, /Users/nick/Desktop/eatforus/app/assets/stylesheets/main.css.scss */
+body header figcaption {
+  clear: both;
+  color: white;
+  height: 15px;
+  text-align: center;
+}
+/* line 44, /Users/nick/Desktop/eatforus/app/assets/stylesheets/main.css.scss */
+body aside {
+  display: inline-block;
+  width: 25%;
+}
+/* line 49, /Users/nick/Desktop/eatforus/app/assets/stylesheets/main.css.scss */
+body aside nav {
+  margin-left: 15%;
+  margin-top: 12%;
+}
+/* line 53, /Users/nick/Desktop/eatforus/app/assets/stylesheets/main.css.scss */
+body aside nav ul {
+  list-style-type: none;
+}
+/* line 58, /Users/nick/Desktop/eatforus/app/assets/stylesheets/main.css.scss */
+body aside nav ul li a {
+  background-color: green;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px black;
+  color: beige;
+  display: block;
+  letter-spacing: 1.5px;
+  margin: 15px 0;
+  height: 35px;
+  padding-top: 13px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 2px 2px black;
+  width: 175px;
+}
+/* line 78, /Users/nick/Desktop/eatforus/app/assets/stylesheets/main.css.scss */
+body main {
+  float: right;
+  width: 75%;
+}
+/* line 82, /Users/nick/Desktop/eatforus/app/assets/stylesheets/main.css.scss */
+body main ul#categories {
+  list-style-type: none;
+}
+/* line 85, /Users/nick/Desktop/eatforus/app/assets/stylesheets/main.css.scss */
+body main ul#categories > li {
+  font-style: bold;
+  font-size: 2em;
+  text-decoration: underline;
+}
+/* line 91, /Users/nick/Desktop/eatforus/app/assets/stylesheets/main.css.scss */
+body main ul#categories ul#articles {
+  padding-left: 25px;
+}
+/* line 99, /Users/nick/Desktop/eatforus/app/assets/stylesheets/main.css.scss */
+body main section.article p.body {
+  text-indent: 30px;
+  width: 70%;
+}
+/* line 106, /Users/nick/Desktop/eatforus/app/assets/stylesheets/main.css.scss */
+body footer {
+  border-top: 2px solid yellow;
+  clear: both;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 114, /Users/nick/Desktop/eatforus/app/assets/stylesheets/main.css.scss */
+body footer p {
+  margin-top: 1%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
