@@ -22,6 +22,8 @@
 	  		<ul>
 	  			<li><%= link_to "Home", root_path %></li>
 	  			<li><%= link_to "Register", new_user_path %></li>
+	  			<li><%= link_to "Log In", sessions_new_path %></li>
+	  			<li><%= link_to "Log Out", sessions_destroy_path, method: 'delete' %></li>
 	  			<li><%= link_to "Categories", categories_path %></li>
 	  			<li><%= link_to "Market Locator", locator_path %></li>
 	  		</ul>
