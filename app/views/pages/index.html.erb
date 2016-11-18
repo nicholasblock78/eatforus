@@ -10,3 +10,8 @@
 	<p>Cut down on your sugar!</p>
 </div>
 
+<% if current_user %>
+	<% @articles.each do |a| %>
+		<%= a.title %>
+	<% end %>
+<% end %>
