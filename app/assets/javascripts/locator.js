@@ -9,7 +9,7 @@ var detailed = function(id) {
   .done(function(response) {
     // console.log(response)
     console.log(response.marketdetails)
-    $('#farm-div').append(response.marketdetails.Address)
+    $('#locator-results').append(response.marketdetails.Address)
   })
 
 }
@@ -24,7 +24,7 @@ var zipcode = function(zipcode) {
    .done(function(response) {
       console.log(response)
       console.log(response.results[0].id)
-      $('#farm-div').append(response.results[0].marketname)
+      $('#locator-results').append(response.results[0].marketname)
 
       var marketId = response.results[0].id
       var marketname = response.results[0].marketname

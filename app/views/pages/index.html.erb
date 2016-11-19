@@ -2,7 +2,9 @@
 <%= link_to('Post a new article', articles_new_path) %>
 <%= link_to('All articles', articles_path) %>
 <div>
-	<h2>Why</h2>
+	<% if flash[:notice] %>
+    <div class="notice" style="font-size: 1.5em; font-weight: bold; color: black;"><%= flash[:notice] %></div>
+  <% end %>
 </div>
 
 <div>
