@@ -1,4 +1,7 @@
 <h2>Log In</h2>
+ <% if flash[:notice] %>
+    <div class="notice" style="font-size: 1.5em; font-weight: bold; color: red;"><%= flash[:notice] %></div>
+  <% end %>
 <%= form_tag sessions_create_path do  %>
 	<%= label_tag :email, "Email Address" %>
 	<%= text_field_tag :email, params[:email] %>
