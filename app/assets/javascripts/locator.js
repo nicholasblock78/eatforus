@@ -76,6 +76,7 @@ var zipcode = function(zipcode) {
 
     var marketId = response.results[0].id
     var marketName = response.results[0].marketname
+    debugger;
     var nameData = $.param({"marketname": marketName})
 
     detailed(marketId.toString(), marketName.toString())
