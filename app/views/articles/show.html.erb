@@ -1,6 +1,6 @@
 <section class="article">
 	<h2><%= @article.title %></h2>
-	<p>Written by: <em><%= @article.author %></em></p>
+	<p>Written by: <em><%= User.find(@article.user_id).first_name %> <%= User.find(@article.user_id).last_name %></em></p>
 	<br />
 	<p class="body"><%= @article.body %></p>
 </section>
