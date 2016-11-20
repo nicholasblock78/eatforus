@@ -2,7 +2,7 @@
 <p>This is function is currently under construction. Soon you will be able to find your closest open farmer's market using an USDA API.</p>
 <br />
 <div class="wrapper map-wrapper">
-	<div>
+	<div id="top" class="map-wrapper">
 		<form id="farm-form">
 			<fieldset style="width: 300px;">
 				<legend>Enter your Location: </legend>
@@ -19,7 +19,12 @@
 				<button id="refresh" style="width: 100px;">Refresh Map</button>
 	</div>
 
-
-	<div id="locator-results"></div>
-	<div id="map-canvas"></div>
 </div>
+	<div id="bottom">
+		<div class="leftside">
+			<div id="map-canvas"></div>
+		</div>
+		<div class="rightside">
+			<div id="locator-results"></div>
+		</div>
+	</div>

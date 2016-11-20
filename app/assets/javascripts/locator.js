@@ -90,7 +90,6 @@ $(document).ready(function() {
   $('#search').on('click', function(event) {
     event.preventDefault();
 
-    var addressInput = $('#farm-form input:first').val();
     var zipInput = $('#farm-form input[name=zip]').val();
 
     zipcode(zipInput.toString());
@@ -99,6 +98,7 @@ $(document).ready(function() {
 });
   $('button').on('click', function() {
     event.preventDefault();
+    $('#locator-results').empty();
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
   });
 
