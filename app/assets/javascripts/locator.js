@@ -31,7 +31,7 @@ infowindow = new google.maps.InfoWindow({
 
 
 ///////////// USDA Farmer's Market Database API Interface ////////////////////
-var detailed = function(id, marketname) {
+var detailed = function(id, marketName) {
   $.ajax({
     type: "GET",
     contentType: "application/json; charset=utf-8",
@@ -56,8 +56,11 @@ var detailed = function(id, marketname) {
           title: 'Hello World!'
         });
 
-    $('#locator-results').append(response.marketdetails.Address);
-    console.log(response.marketdetails.Address)
+    $('#locator-results').append("<h2>" + marketName.substr(marketName.indexOf(' ')+1) + "</h2>")
+    $('#locator-results').append("<p>" + response.marketdetails.Address + "</p><br />");
+    $('#locator-results').append("<p>" + response.marketdetails.Products + "</p><br />");
+    $('#locator-results').append("<p><strong>Schedule:</strong> <br />" + response.marketdetails.Schedule + "</p>");
+    console.log(response.marketdetails)
   });
 
 }
@@ -72,7 +75,6 @@ var zipcode = function(zipcode) {
  .done(function(response) {
     console.log(response);
     console.log(response.results[0].id);
-    $('#locator-results').append(response.results[0].marketname)
 
     var marketId = response.results[0].id;
     var marketName = response.results[0].marketname;
