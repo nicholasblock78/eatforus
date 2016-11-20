@@ -47,6 +47,9 @@ var detailed = function(id) {
     var lng = split[1].slice(1, -1);
     console.log(split)
     console.log(lng)
+    mapOptions['center'] = new google.maps.LatLng(lat, lng);
+    mapOptions['zoom'] = 13;
+
     $('#locator-results').append(response.marketdetails.Address)
     console.log('hellloooooooooo')
     console.log(response.marketdetails.Address)
@@ -63,49 +66,53 @@ var zipcode = function(zipcode) {
   dataType: 'jsonp'})
 
  .done(function(response) {
-  console.log(response)
-  console.log(response.results[0].id)
-  $('#locator-results').append(response.results[0].marketname)
+    console.log(response)
+    console.log(response.results[0].id)
+    $('#locator-results').append(response.results[0].marketname)
 
-  var marketId = response.results[0].id
-  var marketname = response.results[0].marketname
-  var nameData = $.param({"marketname": marketname})
+    var marketId = response.results[0].id
+    var marketname = response.results[0].marketname
+    var nameData = $.param({"marketname": marketname})
 
-  detailed(marketId.toString())
+    detailed(marketId.toString())
 
-  $.ajax({
-   method: 'post',
-   url: '/marketname',
-   data: nameData,
- })
-})
+    $.ajax({
+     method: 'post',
+     url: '/marketname',
+     data: nameData,
+   })
+  });
 }
 
 
 ////////////PAGE LOADED////////////////
 $(document).ready(function() {
-  mapOptions['center'] = new google.maps.LatLng(40.09024, -105.712891);
-  mapOptions['zoom'] = 2;
-  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  // mapOptions['center'] = new google.maps.LatLng(40.09024, -105.712891);
+  
 
   $('#farm-form').on('submit', function(event) {
     event.preventDefault();
-
+    console.log(mapOptions)
     var addressInput = $('#farm-form input:first').val();
     var zipInput = $('#farm-form input[name=zip]').val();
 
     zipcode(zipInput.toString());
+
+
   //To pass code off to Ruby to do work with in the display
-  var $formZip = $(this);
-  var zipQuery = $formZip.serialize();
-  $.ajax({
-    method: $formZip.attr('method'),
-    url: $formZip.attr('action'),
-    data: zipQuery
-  });
+    // var $formZip = $(this);
+    // var zipQuery = $formZip.serialize();
+    // $.ajax({
+    //   method: $formZip.attr('method'),
+    //   url: $formZip.attr('action'),
+    //   data: zipQuery
+    // });
 
 
 })
+  $('button').on('click', function() {
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  })
 
 
 
