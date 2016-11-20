@@ -31,7 +31,7 @@ infowindow = new google.maps.InfoWindow({
 
 
 ///////////// USDA Farmer's Market Database API Interface ////////////////////
-var detailed = function(id) {
+var detailed = function(id, marketname) {
   $.ajax({
     type: "GET",
     contentType: "application/json; charset=utf-8",
@@ -56,11 +56,9 @@ var detailed = function(id) {
           title: 'Hello World!'
         });
 
-    $('#locator-results').append(response.marketdetails.Address)
-    console.log('hellloooooooooo')
+    $('#locator-results').append(response.marketdetails.Address);
     console.log(response.marketdetails.Address)
-
-  })
+  });
 
 }
 
@@ -77,16 +75,11 @@ var zipcode = function(zipcode) {
     $('#locator-results').append(response.results[0].marketname)
 
     var marketId = response.results[0].id
-    var marketname = response.results[0].marketname
-    var nameData = $.param({"marketname": marketname})
+    var marketName = response.results[0].marketname
+    var nameData = $.param({"marketname": marketName})
 
-    detailed(marketId.toString())
+    detailed(marketId.toString(), marketName.toString())
 
-    $.ajax({
-     method: 'post',
-     url: '/marketname',
-     data: nameData,
-   })
   });
 }
 
@@ -95,7 +88,7 @@ var zipcode = function(zipcode) {
 $(document).ready(function() {
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-  $('#farm-form').on('submit', function(event) {
+  $('#search').on('click', function(event) {
     event.preventDefault();
 
     var addressInput = $('#farm-form input:first').val();
@@ -104,21 +97,11 @@ $(document).ready(function() {
     zipcode(zipInput.toString());
 
 
-  //To pass code off to Ruby to do work with in the display
-    // var $formZip = $(this);
-    // var zipQuery = $formZip.serialize();
-    // $.ajax({
-    //   method: $formZip.attr('method'),
-    //   url: $formZip.attr('action'),
-    //   data: zipQuery
-    // });
-
-
 })
   $('button').on('click', function() {
+    event.preventDefault();
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
   })
-
 
 
 
