@@ -28,7 +28,7 @@ infowindow = new google.maps.InfoWindow({
   content: 'hold on there...'
 });
 
-var googleLink = response['GoogleLink']
+
 
 ///////////// USDA Farmer's Market Database API Interface ////////////////////
 var detailed = function(id) {
@@ -40,11 +40,13 @@ var detailed = function(id) {
 
   .done(function(response) {
     console.log(response.marketdetails.GoogleLink)
+    var googleLink = response.marketdetails.GoogleLink
     var latLng = decodeURIComponent(googleLink.substring(googleLink.indexOf("=")+1, googleLink.lastIndexOf("(")));
     var split = latLng.split(',')
     var lat = split[0];
-    var lng = split[1];
+    var lng = split[1].slice(1, -1);
     console.log(split)
+    console.log(lng)
     $('#locator-results').append(response.marketdetails.Address)
     console.log('hellloooooooooo')
     console.log(response.marketdetails.Address)
