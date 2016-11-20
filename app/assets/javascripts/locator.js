@@ -1,4 +1,6 @@
 ///////////// Google Maps API Interface ////////////////////
+alert('foo');
+
 var marketId = [];
 var allLatlng = [];
 var allMarkers = [];
@@ -85,6 +87,7 @@ var zipcode = function(zipcode) {
 
 ////////////PAGE LOADED////////////////
 $(document).ready(function() {
+  alert('bar');
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
   $('#search').on('click', function(event) {
