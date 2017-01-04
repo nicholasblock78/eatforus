@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :comments
+
   get 'sessions/new'
 
   post 'sessions/create'
@@ -19,7 +19,9 @@ get 'articles' => 'articles#index'
 get 'locator' => 'pages#locator'
 
   resources 'categories' do 
-  	resources 'articles'
+  	resources 'articles' do 
+      resources 'comments'
+    end
   end
 
   root 'pages#index'

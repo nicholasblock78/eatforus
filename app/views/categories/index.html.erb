@@ -7,8 +7,8 @@
 		<li><%= cat.title %></li>
 			<ul id="articles">
 				<% cat.articles.each do |a| %>
-					<li><%= a.title %><br />
-					<%= a.author %></li>
+					<li><%= link_to "#{a.title}", category_article_path(category_id: cat.id, id: a.id) %><br />
+					<%= User.find(a.user_id).first_name %> <%= User.find(a.user_id).last_name %></li>
 				<% end %>
 			</ul>
 			<br />

@@ -23,6 +23,8 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id])
+		@category = Category.find(params[:category_id])
+		@comment = Comment.new	
 	end
 
 	private

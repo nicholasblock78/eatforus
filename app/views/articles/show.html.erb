@@ -4,3 +4,18 @@
 	<br />
 	<p class="body"><%= @article.body %></p>
 </section>
+<section class="comments">
+	<ul>
+		<% @article.comments.each do |c| %>
+			<li>
+				<p>said by...<%= User.find(c.user_id).last_name %></p>
+				<p><%= c.text %></p>
+			</li>
+		<% end %>
+	</ul>
+
+</section>
+<%= form_for @comment, url: {action: 'create'} do |f| %>
+	<%= f.text_field :text, placeholder: 'enter a comment' %>
+	<%= f.submit %>
+<% end %>
