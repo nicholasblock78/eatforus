@@ -100,7 +100,7 @@ $(document).ready(function() {
 
 
 });
-  $('button').on('click', function() {
+  $('button#refresh').on('click', function() {
     event.preventDefault();
     $('#locator-results').empty();
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);

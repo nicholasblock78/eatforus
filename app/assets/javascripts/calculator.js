@@ -21,7 +21,7 @@ function myBMIFunction(height, weight) {
     else {
     	bmiClass = "Underweight!!";
     }
-    document.getElementById("bmi").innerHTML = userBMI.toFixed(2);
+    document.getElementById("bmi").innerHTML = userBMI;
     document.getElementById("bmi-class").innerHTML = bmiClass;
 }
 
@@ -30,9 +30,9 @@ function myCalExpenditure() {
 }
 
 $(document).ready(function() {
-
+  console.log('hello there')
   if (localStorage.length === 0) {
-    console.log('elseland');
+    console.log('local storage is empty');
   } else {
     $('#userInformation').css('display', 'none');
     console.log('calculating...')
@@ -64,36 +64,34 @@ $(document).ready(function() {
     if ($('input[name=age]').val() === '') {
       alert('You must enter an age!');
     }
-      else if (!$('input[name=gender]:checked')[0]) {
+    else if (!$('input[name=gender]:checked')[0]) {
       alert('You must select a gender!');
     }
-      else if ($('input[name=wt]').val() === '') {
+    else if ($('input[name=wt]').val() === '') {
       alert('You must enter a weight!');
     }
-      else if (($('input[name=ht-feet]').val() || $('input[name=ht-inches]').val()) === '') {
+    else if (($('input[name=ht-feet]').val() || $('input[name=ht-inches]').val()) === '') {
       alert('You must enter a height!');
     }
-      else if (!$('input[name=activity]:checked')[0]) {
+    else if (!$('input[name=activity]:checked')[0]) {
       alert('You must select an activity!');
     }
-      else if (!$('input[name=goal]:checked')[0]) {
+    else if (!$('input[name=goal]:checked')[0]) {
       alert('You must select a goal!');
     }
     else {
-    //ON CLICK - save these variables to local or session storage so can easily access again
-    //give the impression of a database but there really isn't any
-    var gender = $("input[name='gender']").val();
-    var age = $("input[name='age']").val();
-    var height = parseInt($("input[name='ht-feet']").val()) * 12 + parseInt($("input[name='ht-inches']").val());
-    var weight = $("input[name='wt']").val();
-    console.log(height);
-    localStorage.setItem('gender', gender);
-    localStorage.setItem('age', age);
-    localStorage.setItem('height', height);
-    localStorage.setItem('weight', weight);
+      var gender = $("input[name='gender']").val();
+      var age = $("input[name='age']").val();
+      var height = parseInt($("input[name='ht-feet']").val()) * 12 + parseInt($("input[name='ht-inches']").val());
+      var weight = $("input[name='wt']").val();
+      console.log(height);
+      localStorage.setItem('gender', gender);
+      localStorage.setItem('age', age);
+      localStorage.setItem('height', height);
+      localStorage.setItem('weight', weight);
 
-    myBMIFunction(height, weight);
-  }
+      myBMIFunction(height, weight);
+    }
   });
 
 });
