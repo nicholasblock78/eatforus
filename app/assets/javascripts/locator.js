@@ -87,7 +87,9 @@ var zipcode = function(zipcode) {
 
 ////////////PAGE LOADED////////////////
 $(document).ready(function() {
-  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  if (window.location.href.indexOf('locator') > -1) {
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  }
 
   $('#search').on('click', function(event) {
     event.preventDefault();
