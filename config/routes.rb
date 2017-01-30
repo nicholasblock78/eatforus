@@ -12,14 +12,16 @@ Rails.application.routes.draw do
   # resources 'articles'
   # resources 'categories'
 
-get 'articles/new' => 'articles#new'  
+get 'articles/new' => 'articles#new'
 post 'articles' => 'articles#create'
 get 'articles' => 'articles#index'
 
 get 'locator' => 'pages#locator'
+get 'calculator' => 'pages#calculator'
 
-  resources 'categories' do 
-  	resources 'articles' do 
+
+  resources 'categories' do
+  	resources 'articles' do
       resources 'comments'
     end
   end
