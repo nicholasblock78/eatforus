@@ -22,7 +22,7 @@ var mapOptions = {
     position: google.maps.ControlPosition.RIGHT_CENTER
   },
   scaleControl: false
-}; 
+};
 
 infowindow = new google.maps.InfoWindow({
   content: 'hold on there...'
@@ -35,7 +35,7 @@ var detailed = function(id, marketName) {
   $.ajax({
     type: "GET",
     contentType: "application/json; charset=utf-8",
-    url: "http://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=" + id,
+    url: "https://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=" + id,
     dataType: 'jsonp'})
 
   .done(function(response) {
@@ -69,7 +69,7 @@ var zipcode = function(zipcode) {
  $.ajax({
   type: "GET",
   contentType: "application/json; charset=utf-8",
-  url: "http://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=" + zipcode,
+  url: "https://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=" + zipcode,
   dataType: 'jsonp'})
 
  .done(function(response) {
@@ -107,4 +107,3 @@ $(document).ready(function() {
 
 
 });
-
