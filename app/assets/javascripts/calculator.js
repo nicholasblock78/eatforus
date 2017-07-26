@@ -18,11 +18,16 @@ function myBMIFunction(height, weight) {
     else if (userBMI >= 18.5) {
     	bmiClass = "Normal Weight";
     }
-    else {
+    else  {
     	bmiClass = "Underweight!!";
     }
-    document.getElementById("bmi").innerHTML = userBMI;
-    document.getElementById("bmi-class").innerHTML = bmiClass;
+
+    if (bmiClass === "Underweight!!") {
+      return
+    }
+      document.getElementById("bmi").innerHTML = userBMI;
+      document.getElementById("bmi-class").innerHTML = bmiClass;
+
 }
 
 function myCalExpenditure() {
@@ -31,15 +36,20 @@ function myCalExpenditure() {
 
 $(document).ready(function() {
   console.log('hello there')
-  if (localStorage.length === 0) {
-    console.log('local storage is empty');
-  } else {
+
     $('#userInformation').css('display', 'none');
     console.log('calculating...')
-    document.getElementById("info").innerHTML = "<strong>Welcome Back!</strong>";
 
-    myBMIFunction(localStorage.getItem('height'),localStorage.getItem('weight'));
-  }
+    if (localStorage.getItem('height')===null) {
+      // document.getElementById("info").innerHTML = "<strong>Welcome Back!</strong>Enter your digits";
+      $('#userInformation').css('display', 'inline');
+    }
+    else {
+
+      myBMIFunction(localStorage.getItem('height'),localStorage.getItem('weight'));
+    }
+
+  // }
 
   //RESET BUTTON
   $('button.reset').on('click', function() {
@@ -54,7 +64,7 @@ $(document).ready(function() {
     document.getElementById("bmi").innerHTML = "";
     document.getElementById("bmi-class").innerHTML = "";
     document.getElementById("info").innerHTML = "";
-
+    $('input').val('');
     // $('#bmi').empty();
     // $('#bmi-class').empty();
     $('#userInformation').css('display', 'inline');
@@ -93,6 +103,6 @@ $(document).ready(function() {
       myBMIFunction(height, weight);
     }
   });
-  
+
 
 });
