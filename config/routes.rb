@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   delete 'sessions/destroy'
 
 
-  resources :users
+  resources 'users' do 
+    resources 'recipes'
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # resources 'articles'
   # resources 'categories'
@@ -19,7 +21,7 @@ get 'articles' => 'articles#index'
 get 'locator' => 'pages#locator'
 get 'calculator' => 'pages#calculator'
 
-
+resources 'reviews'
   resources 'categories' do
   	resources 'articles' do
       resources 'comments'

@@ -11,3 +11,12 @@ Article.create(title: "Best Places to Shop", user_id: 1, body: "The best place t
 Comment.create(user_id: 1, text: "Love this! This is exactly what motivated me to lose all of my weight! Thanks for sharing!", article_id: 1)
 Comment.create(user_id: 1, text: "My pigs couldn't be happier.", article_id: 2)
 Comment.create(user_id: 1, text: "Come shop at the farmer's market to buy my fresh beets!", article_id: 3)
+
+Recipe.create(title: 'Homemade Popcorn', image: 'https://www.simplyrecipes.com/wp-content/uploads/2015/01/perfect-popcorn-vertical-b-1800.jpg',description: 'Ditch the microwave and make this classic snack extra deliciously fresh and healthy!', prep_time: 5, cook_time: 5, user_id: 1)
+	Ingredient.create(title: 'unpopped corn kernels', amount: '1 cup', recipe_id: 1 )
+	Ingredient.create(title: 'olive oil', amount: '1/4 cup', recipe_id: 1 )
+	Ingredient.create(title: 'salt', amount: 'to taste', recipe_id: 1 )
+	Instruction.create(step: 'Pour kernels and oil into stockpot. Be sure all the kernels are covered. Turn on the heat onto medium-high. Cover pot with lid', recipe_id: 1)
+	Instruction.create(step: "Listen for popping. Occassionally shake pot to even out kernels not yet popped.", recipe_id: 1 )
+	Instruction.create(step: 'Once popping slows, turn off the heat.', recipe_id: 1)
+	Instruction.create(step: "Pour a little olive oil and the salt over popped popcorn and mix. Then serve!", recipe_id: 1)

@@ -1,0 +1,42 @@
+<h2><%= @recipe.title %></h2>
+<div><image style="width: 300px;" src="<%= @recipe.image %>"/></div>
+<p>Submitted by: <%= @user.first_name %> <%= @user.last_name %></p>
+<div id="review-snippet"></div>
+<div class="times">
+	<p>Prep time: <%= @recipe.prep_time %> min</p>
+	<p>Cook time: <%= @recipe.cook_time %> min</p>
+	<p>Total time: <%= @recipe.prep_time + @recipe.cook_time %> min</p>
+</div>
+
+<div class="ingredients">
+	<% @recipe.ingredients.each do |ingred| %>
+	<%= ingred.title %>
+	<%= ingred.amount %>
+	<br />
+	<% end %>
+</div>
+<br />
+
+<div class="instructions">
+	<ul>
+		<% @recipe.instructions.each do |instruc| %>
+		<li><%= instruc.step %></li>
+		<% end %>
+	</ul>	
+</div>
+<div id="review-display"></div>
+<h2>@recipacular</h2>
+<script>
+	POWERREVIEWS.display.render({
+		api_key: 'fed11c72-3f22-4c01-9f07-733f7b63265d',
+		merchant_group_id: '79061',
+		merchant_id: '583741',
+		page_id: "<%= @recipe.id %>",
+		review_wrapper_url: 	"<%= new_review_path %>?pr_page_id=<%= @recipe.id %>",
+		components: {
+			ReviewSnippet: 'review-snippet',
+			ReviewDisplay: 'review-display'
+		}
+		
+		});
+</script>
