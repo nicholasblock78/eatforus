@@ -18,11 +18,11 @@
 
 
 body {
-	background-color: #cccccc;
+	background-color: rgb(244, 245, 247);
 
 	header {
 		border-bottom: solid 2px yellow;
-		margin-bottom: 2%;
+		// margin-bottom: 2%;
 		.header-container {
 
 			figure {
@@ -40,14 +40,16 @@ body {
 			clear: both;
 			color: white;
 			height: 15px;
-			text-align: center;
+			text-align: left;
+			margin-left: 10%;
 		}
 	}
 
 	aside {
-		// background-color: white;
 		display: inline-block;
-		width: 25%;
+		width: 15%;
+		height: 700px;
+		background-color: #919c9131;
 
 		nav {
 			margin-left: 15%;
@@ -150,4 +152,29 @@ body {
 
 	div {
 
+	}
+
+	fieldset {
+		width: 500px;
+		padding: 7px;
+	}
+
+	.about-img {
+		width: 500px;
+	}
+
+	.arrow {
+		width: 150px;
+	}
+
+	#left-arrow .arrow {
+		transform: rotate(270deg);
+	}
+
+	#right-arrow .arrow {
+		transform: rotate(90deg);
+	}
+
+	#carousel {
+		display: flex;
 	}

@@ -1,14 +1,16 @@
 <h2><%= @recipe.title %></h2>
 <div><image style="width: 300px;" src="<%= @recipe.image %>"/></div>
-<p>Submitted by: <%= @user.first_name %> <%= @user.last_name %></p>
 <div id="review-snippet"></div>
+<p>Submitted by: <%= @user.first_name %> <%= @user.last_name %></p>
 <div class="times">
-	<p>Prep time: <%= @recipe.prep_time %> min</p>
-	<p>Cook time: <%= @recipe.cook_time %> min</p>
-	<p>Total time: <%= @recipe.prep_time + @recipe.cook_time %> min</p>
+	<p><span>Prep time:</span> <%= @recipe.prep_time %> min</p>
+	<p><span>Cook time:</span> <%= @recipe.cook_time %> min</p>
+	<p><span>Total time:</span> <%= @recipe.prep_time + @recipe.cook_time %> min</p>
 </div>
+<br />
 
 <div class="ingredients">
+	<h3>Ingredients</h3>
 	<% @recipe.ingredients.each do |ingred| %>
 	<%= ingred.title %>
 	<%= ingred.amount %>
@@ -16,8 +18,10 @@
 	<% end %>
 </div>
 <br />
+<br />
 
 <div class="instructions">
+	<h3>Instructions</h3>
 	<ul>
 		<% @recipe.instructions.each do |instruc| %>
 		<li><%= instruc.step %></li>

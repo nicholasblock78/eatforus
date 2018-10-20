@@ -5,19 +5,33 @@ $hover: rgba(236, 149, 34, 0.96);
 
 header {
 	background-color: $header-color;
-	height: 200px;
+	
+	height: 500px;
 	margin: 0;
 
 .header-container {
 	display: flex;
 	flex-direction: column;
-	
+	background-image: url("https://res.cloudinary.com/blockscloud/image/upload/v1539301352/Asset_1_i9l7pj.png");
+	background-size:cover;
+	background-position: 0px -50px;
+	height: 500px;
 	width: 100%;
 
 	figure {
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 		/*width: 100%;*/
+		 figcaption {
+			font-family: 'Mali', cursive;
+			 margin: 10px 0 0 20%;
+			 font-size: 1.25em;
+		 }
+
+		img {
+			justify-content: flex-start;
+			margin: 0;
+		}
 	}
 
 	nav {
@@ -45,8 +59,9 @@ header {
 	}
 
 	.header-img {
-		margin-top: 10px;
-		width: 350px;
+		margin: 25px 0 0 70px;
+		width: 480px;
+		
 	}
 }
 }

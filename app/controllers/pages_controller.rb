@@ -4,6 +4,10 @@ class PagesController < ApplicationController
 		@articles = Article.all
 	end
 
+	def about
+
+	end
+
 	def locator
 
 	end

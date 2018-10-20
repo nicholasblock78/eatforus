@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
 
+
   post 'sessions/create'
 
   delete 'sessions/destroy'
@@ -20,6 +21,7 @@ get 'articles' => 'articles#index'
 
 get 'locator' => 'pages#locator'
 get 'calculator' => 'pages#calculator'
+get 'about' => 'pages#about'
 
 resources 'reviews'
   resources 'categories' do
