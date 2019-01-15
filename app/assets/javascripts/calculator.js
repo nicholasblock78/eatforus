@@ -101,6 +101,14 @@ $(document).ready(function() {
       localStorage.setItem('weight', weight);
 
       myBMIFunction(height, weight);
+
+      
+      $.ajax({
+        method: 'put',
+        url: '/update',
+        data: {weight: 205},
+        dataType: 'json'
+      });
     }
   });
 

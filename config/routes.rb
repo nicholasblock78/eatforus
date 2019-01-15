@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   post 'sessions/create'
 
   delete 'sessions/destroy'
-
+  post 'users/update' => 'users#update'
 
   resources 'users' do 
     resources 'recipes'
@@ -29,6 +29,6 @@ resources 'reviews'
       resources 'comments'
     end
   end
-
+  resources 'users'
   root 'pages#index'
 end

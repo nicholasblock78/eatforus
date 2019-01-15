@@ -4,7 +4,8 @@ class CreateArticles < ActiveRecord::Migration[5.0]
     	t.string :title
     	t.text :body
     	t.integer :category_id
-    	t.integer :user_id
+      t.integer :user_id
+      t.string :main_image
 
       t.timestamps
     end

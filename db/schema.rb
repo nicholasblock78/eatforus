@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20181011221522) do
     t.text     "body"
     t.integer  "category_id"
     t.integer  "user_id"
+    t.string   "main_image"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -69,6 +70,9 @@ ActiveRecord::Schema.define(version: 20181011221522) do
     t.string   "last_name"
     t.string   "email"
     t.string   "password_digest"
+    t.string   "pantry_id"
+    t.string   "grocery_list_id"
+    t.string   "weight"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.index ["email"], name: "index_users_on_email", using: :btree

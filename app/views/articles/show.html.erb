@@ -2,6 +2,7 @@
 	<h2><%= @article.title %></h2>
 	<p>Written by: <em><%= User.find(@article.user_id).first_name %> <%= User.find(@article.user_id).last_name %></em></p>
 	<br />
+	<image src="<%= @article.main_image %>" width: '250px' />
 	<p class="body"><%= @article.body %></p>
 </section>
 <section class="comments">

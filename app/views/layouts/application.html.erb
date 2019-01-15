@@ -8,6 +8,14 @@
 	<link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({
+		google_ad_client: "ca-pub-7225276698800562",
+		enable_page_level_ads: true
+	});
+	</script>
   </head>
 
   <body>
@@ -24,6 +32,7 @@
 	  		<ul>
 	  			<li><%= link_to "Home", root_path %></li>
 	  			<% if current_user %>
+				  <li><%= link_to "My Profile", user_path(id: session[:user_id]) %></li>
 		  			<li><%= link_to "Log Out", sessions_destroy_path, method: 'delete' %></li>
 	  			<% else %>
 		  			<li><%= link_to "Register", new_user_path %></li>
